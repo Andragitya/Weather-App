@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: greycliff-cf, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+    overflow-y: hidden;
+}
+
+.app:before {
+    content: '';
+    background: url('./assets/gbk\ jakarta.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.inputbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+input {
+    font: inherit;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: #777;
+    padding: .4rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+input:focus,
+input:hover {
+    outline: none;
+    padding: .5rem .5rem;
+    border-radius: 1rem;
+    border-color: #7a9cc6;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, .6);
+}
+
+input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.container {
+    max-width: 700px;
+    height: 700px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app .top {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.app .description {
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+}
+
+.app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 8rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bottom .bottom-caption {
+    font-size: 20px;
+}
